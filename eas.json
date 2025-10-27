@@ -1,11 +1,12 @@
 {
   "build": {
-    "production": {
-      "android": { "buildType": "app-bundle" }
-    },
     "apk": {
-      "android": { "buildType": "apk" }
+      "android": {
+        "buildType": "apk"
+      }
     }
   },
-  "cli": { "version": ">= 3.0.0" }
+  "cli": {
+    "version": ">= 13.0.0"
+  }
 }
