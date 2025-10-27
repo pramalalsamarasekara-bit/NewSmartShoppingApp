@@ -1,47 +1,21 @@
 {
   "expo": {
-    "name": "NewSmartShoppingApp",
-    "slug": "newsmartshoppingapp",
-    "scheme": "smartshopping",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    ...
     "plugins": [
-      [
-        "react-native-google-mobile-ads",
-        {
-          "androidAppId": "ca-app-pub-xxxxxxxx~yyyyyyyy"
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
-            "minSdkVersion": 24,
-            "kotlinVersion": "2.0.21"
-          }
-        }
-      ]
+      ["react-native-google-mobile-ads", { "androidAppId": "ca-app-pub-xxxxxxxx~yyyyyyyy" }],
+      ["expo-build-properties", { "android": { "compileSdkVersion": 35, "targetSdkVersion": 35, "minSdkVersion": 24, "kotlinVersion": "2.0.21" } }]
     ],
-    "android": {
-      "package": "com.smartshopping.app",
-      "versionCode": 2,
-      "permissions": []
-    },
+    "android": { "package": "com.smartshopping.app", "versionCode": 2, "permissions": [] },
+
     "updates": {
-      "url": "https://u.expo.dev/REPLACE_WITH_EAS_PROJECT_ID"
+      "url": "https://u.expo.dev/PASTE-YOUR-PROJECT-ID"
     },
-    "runtimeVersion": {
-      "policy": "sdkVersion"
-    },
-    "cli": {
-      "appVersionSource": "remote"
-    },
+    "runtimeVersion": { "policy": "sdkVersion" },
+    "cli": { "appVersionSource": "remote" },
+
     "extra": {
       "eas": {
-        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+        "projectId": "PASTE-YOUR-PROJECT-ID"
       }
     }
   }
