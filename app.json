@@ -29,14 +29,14 @@
     },
 
     "updates": {
-      "url": "https://u.expo.dev/PASTE-YOUR-PROJECT-ID"
+      "url": "https://u.expo.dev/a5598fd6-e378-41aa-8091-dcf4dbf6401d"
     },
     "runtimeVersion": { "policy": "sdkVersion" },
     "cli": { "appVersionSource": "remote" },
 
     "extra": {
       "eas": {
-        "projectId": "PASTE-YOUR-PROJECT-ID"
+        "projectId": "a5598fd6-e378-41aa-8091-dcf4dbf6401d"
       }
     }
   }
