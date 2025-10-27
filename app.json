@@ -1,43 +1,33 @@
 {
   "expo": {
-    "name": "NewSmartShoppingApp",
+    "name": "smartshopping",
     "slug": "NewSmartShoppingApp",
-    "scheme": "smartshopping",
-
+    "android": {
+      "package": "com.smartshopping.app",
+      "versionCode": 2
+    },
     "plugins": [
-      [
-        "react-native-google-mobile-ads",
-        { "androidAppId": "ca-app-pub-xxxxxxxx~yyyyyyyy" }
-      ],
       [
         "expo-build-properties",
         {
           "android": {
-  "compileSdkVersion": 34,
-  "targetSdkVersion": 34,
-  "minSdkVersion": 23,
-  "kotlinVersion": "1.9.25"
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "minSdkVersion": 24,
+            "kotlinVersion": "2.0.21"
           }
         }
       ]
+      /* react-native-google-mobile-ads plugin එක දාන්න එපා (තාවකාලිකව).
+         AdMob app id එක later add කරමු. */
     ],
-
-    "android": {
-      "package": "com.smartshopping.app",
-      "versionCode": 2,
-      "permissions": []
-    },
-
     "updates": {
       "url": "https://u.expo.dev/a5598fd6-e378-41aa-8091-dcf4dbf6401d"
     },
     "runtimeVersion": { "policy": "sdkVersion" },
     "cli": { "appVersionSource": "remote" },
-
     "extra": {
-      "eas": {
-        "projectId": "a5598fd6-e378-41aa-8091-dcf4dbf6401d"
-      }
+      "eas": { "projectId": "a5598fd6-e378-41aa-8091-dcf4dbf6401d" }
     }
   }
 }
