@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472946303401",
+    "project_id": "smart-shopping-5da9c",
+    "storage_bucket": "smart-shopping-5da9c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472946303401:android:27c727ebdd9ccf029564b8",
+        "android_client_info": {
+          "package_name": "com.smartshopping.applk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs5HR6utCfNu2lfIQUIBWGtWNxu4Snouw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

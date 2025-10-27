@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "NewSmartShoppingApp",
+    "slug": "NewSmartShoppingApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "smartshopping",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.smartshopping.app",
+      "versionCode": 2
+    },
+    "plugins": [
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "minSdkVersion": 24,
+            "buildToolsVersion": "35.0.0"
+          }
+        }
+      ],
+      "expo-router"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a5598fd6-e378-41aa-8091-dcf4dbf6401d"
+      }
+    }
+  }
+}

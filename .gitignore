@@ -1,0 +1,11 @@
+# Expo
+.expo/
+.expo-shared/
+web-build/
+
+# Node modules
+node_modules/
+
+# EAS native project folders
+/android
+/ios

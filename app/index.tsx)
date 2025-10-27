@@ -1,0 +1,23 @@
+import React from "react";
+import { View, Text } from "react-native";
+import AdBanner from "../components/AdBanner";
+import InterstitialButton from "../components/Interstitial";
+
+export default function HomeScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: "space-between" }}>
+      <View style={{ alignItems: "center", marginTop: 100 }}>
+        <Text style={{ fontSize: 22, fontWeight: "bold" }}>Smart Shopping App</Text>
+        <Text>AdMob Integrated ✅</Text>
+      </View>
+
+      {/* Interstitial Button */}
+      <View style={{ alignItems: "center", marginBottom: 20 }}>
+        <InterstitialButton />
+      </View>
+
+      {/* Banner */}
+      <AdBanner />
+    </View>
+  );
+}
