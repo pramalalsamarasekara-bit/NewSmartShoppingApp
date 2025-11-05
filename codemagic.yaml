@@ -2,7 +2,7 @@ workflows:
   expo-prebuild-android:
     name: Expo (prebuild) → Android APK
     max_build_duration: 60
-    instance_type: linux_x2
+    instance_type: linux_x1   # ← free/low plan friendly
     environment:
       node: 18
       npm: 9
@@ -14,10 +14,14 @@ workflows:
       - name: Generate native android/ with Expo prebuild
         script: |
           npx expo prebuild --platform android --no-install
-      - name: Build Android release APK
+      - name: Put google-services.json in android/app
+        script: |
+          mkdir -p android/app
+          cp google-services.json android/app/google-services.json
+      - name: Build Android **DEBUG** APK
         script: |
           cd android
-          ./gradlew assembleRelease
+          ./gradlew assembleDebug
     artifacts:
       - android/app/build/outputs/**/**/*.apk
     cache:
