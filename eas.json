@@ -1,14 +1,22 @@
 {
-  "cli": { "version": ">= 12.0.0" },
-  "build": {
-    "apk": {
-      "android": {
-        "buildType": "apk",
-        "developmentClient": false
-      },
-      "env": {
-        "EXPO_NO_TELEMETRY": "1"
-      }
-    }
-  }
+"cli": { "version": ">= 12.0.0" },
+"build": {
+"apk": {
+"android": {
+"buildType": "apk",
+"developmentClient": false
+},
+"env": {
+"EXPO_NO_TELEMETRY": "1"
+}
+},
+"production": {
+"android": {
+"gradleCommand": ":app:bundleRelease"
+},
+"env": {
+"EXPO_NO_TELEMETRY": "1"
+}
+}
+}
 }
