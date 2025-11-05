@@ -22,8 +22,8 @@
     "react-native-svg": "14.1.0",
     "react-native-webview": "13.6.3"
   },
-  "devDependencies": {
-    "@react-native/gradle-plugin": "^0.82.1",
+  "overrides": {
+    "@react-native/gradle-plugin": "^0.76.0",
     "@types/react": "~18.2.45",
     "expo-build-properties": "^1.0.9",
     "react-native-gradle-plugin": "^0.71.19",
