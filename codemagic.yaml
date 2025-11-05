@@ -6,10 +6,16 @@ workflows:
       node: 18
       npm: 9
       java: 17
+
     scripts:
       - name: Install dependencies
         script: |
-          npm install --no-audit --no-fund
+          rm -rf node_modules
+          npm ci --no-audit --no-fund
+          npm dedupe
+          # check duplicates (මේක build fail නොකරෙයි)
+          ls -d node_modules/@react-native/gradle-plugin \
+                node_modules/react-native/node_modules/@react-native/gradle-plugin || true
 
       - name: Generate native android/ with Expo prebuild
         script: |
@@ -20,12 +26,12 @@ workflows:
           mkdir -p android/app
           cp google-services.json android/app/google-services.json
 
+      # (Mac machine අරගත්තොත් Java 17ට force)
       - name: Force Java 17 (Mac)
         script: |
           if command -v /usr/libexec/java_home >/dev/null 2>&1; then
             export JAVA_HOME=$(/usr/libexec/java_home -v 17)
             export PATH="$JAVA_HOME/bin:$PATH"
-            echo "JAVA_HOME=$JAVA_HOME"
             java -version
           fi
 
@@ -37,6 +43,7 @@ workflows:
 
     artifacts:
       - android/app/build/outputs/apk/**/*.apk
+
     cache:
       cache_paths:
         - $HOME/.gradle/caches
