@@ -2,49 +2,26 @@ workflows:
   expo-prebuild-android:
     name: Expo (prebuild) → Android APK
     max_build_duration: 60
-
     environment:
       node: 18
       npm: 9
       java: 17
-
     scripts:
-      - name: Install dependencies
+      - name: Install dependencies (clean)
         script: |
-          npm ci --no-audit --no-fund
-          npm dedupe
-
+          rm -rf node_modules package-lock.json
+          npm cache clean --force
+          npm ci --legacy-peer-deps
       - name: Generate native android/ with Expo prebuild
         script: |
           npx expo prebuild --platform android --no-install
-
-      - name: Ensure single RN Gradle plugin
-        script: |
-          echo "Checking for duplicate @react-native/gradle-plugin..."
-          ls -d node_modules/@react-native/gradle-plugin \
-                node_modules/react-native/node_modules/@react-native/gradle-plugin || true
-
-          if [ -d node_modules/react-native/node_modules/@react-native/gradle-plugin ]; then
-            echo "⚠️ Removing nested @react-native/gradle-plugin to avoid duplicate build path"
-            rm -rf node_modules/react-native/node_modules/@react-native/gradle-plugin
-          else
-            echo "✅ No duplicate gradle-plugin found"
-          fi
-
-      - name: Put google-services.json in android/app
-        script: |
-          mkdir -p android/app
-          cp google-services.json android/app/google-services.json
-
       - name: Build Android DEBUG APK
         script: |
           cd android
           ./gradlew --version
           ./gradlew assembleDebug
-
     artifacts:
       - android/app/build/outputs/apk/**/*.apk
-
     cache:
       cache_paths:
         - $HOME/.gradle/caches
