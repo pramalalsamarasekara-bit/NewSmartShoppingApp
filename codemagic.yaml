@@ -1,5 +1,9 @@
 workflows:
   expo-prebuild-android:
+  - name: Put google-services.json in android/app
+  script: |
+    mkdir -p android/app
+    cp google-services.json android/app/google-services.json
     name: Expo (prebuild) → Android APK
     max_build_duration: 60
     environment:
