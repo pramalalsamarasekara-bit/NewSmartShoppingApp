@@ -4,26 +4,19 @@
     "slug": "NewSmartShoppingApp",
     "android": {
       "package": "com.yourcompany.smartshopping",
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "google-services.json"
     },
     "plugins": [
       [
         "expo-build-properties",
         {
           "android": {
-             "kotlinVersion": "1.9.24",
-            "gradlePluginVersion": "8.2.2",
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
             "minSdkVersion": 23,
-            "kotlinVersion": "1.9.22"
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "kotlinVersion": "1.9.24",
+            "gradlePluginVersion": "8.2.2"
           }
-        }
-      ],
-      [
-        "react-native-google-mobile-ads",
-        {
-          "android_app_id": "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"
         }
       ]
     ]
