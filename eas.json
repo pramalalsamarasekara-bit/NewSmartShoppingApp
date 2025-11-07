@@ -1,22 +1,13 @@
 {
-"cli": { "version": ">= 12.0.0" },
-"build": {
-"apk": {
-"android": {
-"buildType": "apk",
-"developmentClient": false
-},
-"env": {
-"EXPO_NO_TELEMETRY": "1"
-}
-},
-"production": {
-"android": {
-"gradleCommand": ":app:bundleRelease"
-},
-"env": {
-"EXPO_NO_TELEMETRY": "1"
-}
-}
-}
+  "cli": { "version": ">= 7.8.1" },
+  "build": {
+    "development-apk": {
+      "android": { "gradleCommand": ":app:assembleDebug", "buildType": "apk" },
+      "distribution": "internal"
+    },
+    "release-aab": {
+      "android": { "buildType": "app-bundle" }
+    }
+  },
+  "submit": {}
 }
