@@ -1,8 +1,4 @@
 {
-  "name": "NewSmartShoppingApp",
-  "version": "1.0.0",
-  "private": true,
-  "main": "expo-router/entry",
   "scripts": {
     "android": "expo run:android",
     "ios": "expo run:ios",
@@ -10,27 +6,12 @@
     "build": "expo build"
   },
   "dependencies": {
-    "@expo/vector-icons": "^14.0.2",
-    "@react-native-async-storage/async-storage": "~1.21.0",
-    "expo": "~51.0.0",
-    "expo-build-properties": "~0.12.5",
-    "expo-font": "~12.0.7",
-    "expo-modules-core": "~1.12.0",
-    "expo-router": "^3.5.23",
-    "expo-system-ui": "~3.0.7",
-    "react": "18.2.0",
+    "expo": "~51.0.7",
     "react-native": "0.74.5",
-    "react-native-google-mobile-ads": "14.4.1",
-    "react-native-svg": "14.1.0",
-    "react-native-webview": "13.6.3"
-  },
-  "devDependencies": {
+    "expo-router": "~3.5.23",
+    "expo-modules-core": "~1.12.25",
     "expo-build-properties": "~0.12.5",
-    "typescript": "~5.3.3"
-  },
-  "engines": {
-    "node": ">=18 <21",
-    "npm": ">=9"
-  },
-  "packageManager": "npm@10"
+    "@react-native-async-storage/async-storage": "~1.21.0",
+    "react-native-google-mobile-ads": "14.4.1"
+  }
 }
