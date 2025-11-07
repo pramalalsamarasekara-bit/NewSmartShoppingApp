@@ -1,0 +1,25 @@
+workflows:
+  expo-android-apk:
+    name: Expo (prebuild) → Android APK
+    environment:
+      node: 18
+      npm: 9
+      java: 17
+      android: 34
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm ci --no-audit --no-fund
+      - name: Generate native android/ with Expo prebuild
+        script: |
+          npx expo prebuild --platform android --no-install
+      - name: Put google-services.json in android/app
+        script: |
+          mkdir -p android/app
+          cp google-services.json android/app/google-services.json
+      - name: Build Android DEBUG APK
+        script: |
+          cd android
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/**/**/*.apk
